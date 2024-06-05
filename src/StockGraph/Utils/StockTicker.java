@@ -65,7 +65,7 @@ public class StockTicker {
         } catch (IOException e) {
             if(e instanceof FileNotFoundException){
                 e.printStackTrace();
-                System.out.println("CSV-File could no be written. Check pathname of file as it might conflict with another filesystem. Edit the generateCSV-method of class StockTicker.");
+                System.out.println("CSV-File could no be written. Check pathname of file as it might conflict with another filesystem or Java Project Structure. Edit the generateCSV-method of class StockTicker.");
                 return;
             }else{
                 e.printStackTrace();

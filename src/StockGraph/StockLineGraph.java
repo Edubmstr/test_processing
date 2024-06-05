@@ -1,7 +1,7 @@
 package StockGraph;
 
 import StockGraph.Components.LineChart;
-import StockGraph.Components.RestartButton;
+import StockGraph.Components.Button;
 import StockGraph.Components.TextLabel;
 import StockGraph.Utils.StockTicker;
 import processing.core.PApplet;
@@ -14,13 +14,13 @@ public class StockLineGraph extends PApplet{
     private TextLabel startValueLabel;
     private TextLabel volatilityLabel;
     private StockTicker stocks;
-    private RestartButton restart;
+    private Button restart;
     public static void main(String[] args){
         PApplet.main(StockLineGraph.class);
     }
 
     public void settings () { 
-        size(1500 , 805);
+        size(1700 , 805);
     }
 
     public void setup(){
@@ -38,7 +38,8 @@ public class StockLineGraph extends PApplet{
         startValueLabel.addState(stocks.getStartValue());
         volatilityLabel.addState((float)stocks.getVolatility());
         stockLineChart.addData(stocks.getSimulatedStocks());
-        restart = new RestartButton(0, 0, 100, 100, "Restart", this);
+        restart = new Button(0, 0, 100, 100, "Restart", this);
+        restart.loadImage("src/StockGraph/Static/stock-market.png");
     }
 
     public void draw(){
