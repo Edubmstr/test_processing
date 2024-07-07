@@ -75,7 +75,6 @@ public class StockTicker {
     }
     
     private float nextNumber(float input){
-        Random random = new Random();
         return (input + (float)(random.nextGaussian() * volatility));
         //return (input + (random.nextDouble(-1, 1) * volatility));
     }

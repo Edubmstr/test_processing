@@ -89,7 +89,7 @@ public class LineChart {
         }
 
         for (int i = 0; i < chartValues.size() - 1; i = i +100) {
-            float x = pApplet.map(i, 0, chartValues.size()-1, 50, 1550);
+            float x = PApplet.map(i, 0, chartValues.size()-1, 50, 1550);
             if(i == 0) continue;
             pApplet.line(x, pApplet.height-45, x, pApplet.height-55);
             pApplet.strokeWeight(1);
